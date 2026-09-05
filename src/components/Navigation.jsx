@@ -2,13 +2,17 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { IoHomeOutline } from 'react-icons/io5';
+import { IoMdStopwatch } from 'react-icons/io';
+import { BsGraphUp } from 'react-icons/bs';
 
 
 export default function Navigation() {
+  const pathname = usePathname();
   const links = <>
-    <li><Link className={usePathname === '/' ? 'text-blue-400':""} href="/home">Home</Link></li>
-    <li><Link className={usePathname === '/' ? 'text-blue-400':""} href="/timeline">Timeline</Link></li>
-    <li><Link className={usePathname === '/' ? 'text-blue-400':""} href="/stats">Stats</Link></li>
+    <li><Link className={pathname === '/' ? 'bg-[#244D3F] text-[#FFFFFF]':"" } href="/"><IoHomeOutline></IoHomeOutline> Home</Link></li>
+    <li><Link className={pathname === '/timeline' ? 'bg-[#244D3F] text-[#FFFFFF]':""} href="/timeline"> <IoMdStopwatch></IoMdStopwatch> Timeline</Link></li>
+    <li><Link className={pathname === '/stats' ? 'bg-[#244D3F] text-[#FFFFFF]':""} href="/stats"><BsGraphUp></BsGraphUp> Stats</Link></li>
   </>
   return (
     <div className="max-lg:collapse bg-base-200 lg:mb-48 shadow-sm w-full rounded-md">
@@ -22,7 +26,7 @@ export default function Navigation() {
       <button className="btn btn-ghost text-xl">daisyUI</button>
     </div>
     <div className="navbar-end hidden lg:flex">
-      <ul className="menu menu-horizontal px-1">
+      <ul className="menu menu-horizontal px-1 gap-3">
       {links}
       </ul>
     </div>
