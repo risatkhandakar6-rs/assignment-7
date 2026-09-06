@@ -16,15 +16,15 @@ export default function QuickCheckIn({ friend }) {
       <h3 className="font-semibold mb-4 text-[#244D3F]">Quick Check-In</h3>
       <div className="grid grid-cols-3 gap-4">
         <button className="btn btn-outline flex-col h-20" onClick={() => handleKnock('call')}>
-          <p className='text-3xl'><MdOutlinePhoneCallback /></p>
+          <p className='text-lg sm:text-3xl '><MdOutlinePhoneCallback /></p>
           <span className="text-sm">Call</span>
         </button>
         <button className="btn btn-outline flex-col h-20" onClick={() => handleKnock('message')}>
-          <p className='text-3xl'><LuMessageSquareText /></p>
+          <p className='text-lg sm:text-3xl'><LuMessageSquareText /></p>
           <span className="text-sm">Text</span>
         </button>
         <button className="btn btn-outline flex-col h-20" onClick={() => handleKnock('video')}>
-          <p className='text-3xl'><MdOutlineVideoCameraFront /></p>
+          <p className='text-lg sm:text-3xl'><MdOutlineVideoCameraFront /></p>
           <span className="text-sm">Video</span>
         </button>
       </div>

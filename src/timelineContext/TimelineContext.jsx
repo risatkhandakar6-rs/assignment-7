@@ -11,12 +11,17 @@ export default function TimelineContext({ children }) {
     const newKnock = {
       id: Date.now(),
       name: friend.name,
-      type: type
+      type: type,
+      date: new Date().toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+      }),
     };
 
     setKnocks((previousKnocks) => [
+      newKnock,
       ...previousKnocks,
-      newKnock
     ]);
   };
 
