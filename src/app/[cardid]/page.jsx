@@ -36,11 +36,11 @@ export default async function FriendDetailsPage({ params }) {
           'bg-green-900'
             }`}>{status}</span>
           
-             <p className='flex gap-2 mt-2 text-xs'>{
+             <div className='flex gap-2 mt-2 text-xs'>{
           tags.map((tag, ind) => (
              <ul key={ind}><li className='bg-green-200 rounded-full px-2 text-center'>{tag}</li></ul>
           ))
-          }</p>
+          }</div>
           <i className='text-[#64748B] mt-2 whitespace-nowrap text-xs'>{bio}</i>
           <p className='text-xs text-[#64748B]'>{email}</p>
           
