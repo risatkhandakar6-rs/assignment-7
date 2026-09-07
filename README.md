@@ -2,7 +2,7 @@
 
 **KeenKeeper** is a personal relationship-tracking app that helps you stay connected with the friends who matter most. Browse your friend list, log quick check-ins (calls, texts, or video chats), and visualize your interaction habits — all in one clean dashboard.
 
-🔗 **Live Site:** [https://your-netlify-link-here.netlify.app](https://your-netlify-link-here.netlify.app)
+🔗 **Live Site:** [https://assignment-7-nine-lake.vercel.app/](https://assignment-7-nine-lake.vercel.app/)
 
 ---
 
