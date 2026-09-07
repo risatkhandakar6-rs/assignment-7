@@ -3,12 +3,14 @@ import { useContext } from 'react';
 import { LuMessageSquareText } from 'react-icons/lu';
 import { MdOutlinePhoneCallback, MdOutlineVideoCameraFront } from 'react-icons/md';
 import { KnockContext } from '@/timelineContext/TimelineContext';
+import { toast } from 'react-toastify';  
 
 export default function QuickCheckIn({ friend }) {
   const { addKnock } = useContext(KnockContext);
 
   const handleKnock = (type) => {
     addKnock(friend, type);
+     toast.success(`${type} logged with ${friend.name}`);
   };
 
   return (

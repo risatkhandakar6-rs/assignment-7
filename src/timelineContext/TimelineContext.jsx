@@ -1,11 +1,19 @@
 "use client";
 
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+
 
 export const KnockContext = createContext();
 
 export default function TimelineContext({ children }) {
   const [knocks, setKnocks] = useState([]);
+
+   useEffect(() => {
+    const stored = localStorage.getItem("knocks");
+    if (stored) {
+      setKnocks(JSON.parse(stored));
+    }
+  }, []);
 
   const addKnock = (friend, type) => {
     const newKnock = {
@@ -19,10 +27,11 @@ export default function TimelineContext({ children }) {
       }),
     };
 
-    setKnocks((previousKnocks) => [
-      newKnock,
-      ...previousKnocks,
-    ]);
+    setKnocks((previousKnocks) => {
+      const updated = [newKnock, ...previousKnocks];
+      localStorage.setItem("knocks", JSON.stringify(updated)); // save kore rakho
+      return updated;
+    });
   };
 
   return (

@@ -2,6 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import KnockProvider from "@/timelineContext/TimelineContext";
+ import { ToastContainer, toast } from 'react-toastify';
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,8 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
         <KnockProvider>
            <Navigation></Navigation>
-        {children}
+          {children}
+        <ToastContainer></ToastContainer>
       </KnockProvider>
       </body>
     </html>
