@@ -1,11 +1,12 @@
 import React from 'react'
 import Banner from "@/components/Banner"
 import FriendCard from "@/components/FriendCard"
+import friends from "../../public/data.json"
 
 
 export default async function Friends() {
-  const res = await fetch('http://localhost:3000/data.json');
-  const friends = await res.json();
+  // const res = await fetch('http://localhost:3000/data.json');
+  // const friends = await res.json();
   return (
     <div>
       <Banner></Banner>
