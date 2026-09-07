@@ -3,6 +3,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import KnockProvider from "@/timelineContext/TimelineContext";
  import { ToastContainer, toast } from 'react-toastify';
+import Footer from "@/components/Footer";
 
 
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <KnockProvider>
            <Navigation></Navigation>
           {children}
+          <Footer></Footer>
         <ToastContainer></ToastContainer>
       </KnockProvider>
       </body>

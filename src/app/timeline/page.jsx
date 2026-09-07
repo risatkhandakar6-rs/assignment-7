@@ -23,7 +23,7 @@ export default function TimeLine() {
         <option value="video">Video</option>
       </select>
 
-      <div>
+      <div className="">
 
         {filterdKnocks.length === 0 && (
           <p className="text-[#64748B] text-sm">nooo entires found</p>

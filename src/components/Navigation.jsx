@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { IoHomeOutline } from 'react-icons/io5';
 import { IoMdStopwatch } from 'react-icons/io';
 import { BsGraphUp } from 'react-icons/bs';
+import Footer from './Footer';
 
 
 export default function Navigation() {
@@ -15,7 +16,7 @@ export default function Navigation() {
     <li><Link className={pathname === '/stats' ? 'bg-[#244D3F] text-[#FFFFFF]':""} href="/stats"><BsGraphUp></BsGraphUp> Stats</Link></li>
   </>
   return (
-    <div className="max-lg:collapse bg-base-200 mb-15 lg:mb-20  shadow-sm w-full rounded-md px-2 sm:px-15 mx-auto">
+    <div className="max-lg:collapse bg-base-200 mb-15 lg:mb-20  shadow-sm w-full rounded-md px-2 sm:px-15 mx-auto ">
   <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
   <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
   <div className="collapse-title navbar justify-between">
@@ -40,7 +41,8 @@ export default function Navigation() {
     <ul className="menu">
       {links}
     </ul>
-  </div>
+      </div>
+     
 </div>
   )
 }
