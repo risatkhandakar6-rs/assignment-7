@@ -6,6 +6,7 @@ import { MdDelete, MdOutlinePhoneCallback, MdOutlineVideoCameraFront } from 'rea
 import { RiNotificationSnoozeLine } from 'react-icons/ri';
 
 import QuickCheckIn from '@/components/QuickCheckIn';
+import friends from "../../../public/data.json"
 
 
 
@@ -14,11 +15,10 @@ export default async function FriendDetailsPage({ params }) {
 
 
   const { cardid } = await params;
-  const res = await fetch('http://localhost:3000/data.json');
-  const friends = await res.json();
+ 
   const friend = friends.find((f) => f.id.toString() === cardid);
   if (!friend) {
-    <div>Friend not found</div>
+     return<div>Friend not found</div>
   }
     
   const {id, name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date}=friend
